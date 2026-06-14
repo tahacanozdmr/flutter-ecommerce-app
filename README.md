@@ -1,0 +1,66 @@
+# Calisma
+
+## Kısa Açıklama
+
+Calisma, bir REST API üzerinden ürün listesini çeken basit bir Flutter alışveriş
+uygulamasıdır. Ana ekranda ürünler listelenir, ürün detayları görüntülenebilir ve
+ürünler sepete eklenebilir. Ağ istekleri için `http` paketi kullanılır.
+
+Başlıca ekranlar:
+
+- **Ana ekran** (`home_screen.dart`) — API'den gelen ürünlerin listelendiği ekran
+- **Ürün detay ekranı** (`product_detail_screen.dart`) — seçilen ürünün detayları
+- **Sepet ekranı** (`cart_screen.dart`) — sepete eklenen ürünler
+
+## Kullanılan Flutter Sürümü
+
+- **Flutter:** 3.38.4 (stable channel)
+- **Dart:** 3.10.3
+- **Dart SDK kısıtı:** `^3.10.3` (bkz. `pubspec.yaml`)
+
+### Bağımlılıklar
+
+- `http: ^1.6.0` — API istekleri için
+- `cupertino_icons: ^1.0.8`
+- `flutter_lints: ^6.0.0` (dev)
+
+## Çalıştırma Adımları
+
+1. Depoyu klonlayın ve proje dizinine girin:
+
+   ```bash
+   git clone <repo-url>
+   cd calisma
+   ```
+
+2. Bağımlılıkları yükleyin:
+
+   ```bash
+   flutter pub get
+   ```
+
+3. Bağlı bir cihaz veya emülatör olduğundan emin olun:
+
+   ```bash
+   flutter devices
+   ```
+
+4. Uygulamayı çalıştırın:
+
+   ```bash
+   flutter run
+   ```
+
+   Belirli bir platformda çalıştırmak için:
+
+   ```bash
+   flutter run -d chrome     # Web
+   flutter run -d windows    # Windows masaüstü
+   ```
+
+5. (İsteğe bağlı) Yayın için derleme:
+
+   ```bash
+   flutter build apk         # Android
+   flutter build windows     # Windows
+   ```
