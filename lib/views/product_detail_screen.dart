@@ -19,7 +19,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Back")),
+      appBar: AppBar(title: Text(widget.product.name ?? "")),
 
       body: SafeArea(
         child: SingleChildScrollView(
@@ -79,10 +79,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         
                     Text(
                       widget.product.price ?? "",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        color: Colors.blue.shade600,
+                        color: Color(0xFF6C5CE7),
                       ),
                     ),
         
@@ -104,7 +104,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black,
+                        backgroundColor: const Color(0xFF6C5CE7),
                         minimumSize: Size(double.infinity, 50),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),

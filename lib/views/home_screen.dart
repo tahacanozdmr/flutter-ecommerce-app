@@ -65,6 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontSize: 34,
                       fontWeight: FontWeight.bold,
                       letterSpacing: -0.5,
+                      color: Color(0xFF6C5CE7),
                     ),
                   ),
 
@@ -72,6 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   IconButton(
                     icon: const Icon(Icons.shopping_bag_outlined),
+                    color: const Color(0xFF6C5CE7),
                     iconSize: 32,
                     onPressed: () {
                       Navigator.push(
@@ -91,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 8),
 
               const Text(
-                'Find your perfect device.',
+                'Find products you will love.',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.grey,
@@ -119,13 +121,50 @@ class _HomeScreenState extends State<HomeScreen> {
 
               SizedBox(height: 16),
 
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.network(
-                  "https://wantapi.com/assets/banner.png",
-                  height: 80,
-                  width: double.infinity,
-                  fit: BoxFit.fitWidth,
+              Container(
+                height: 110,
+                width: double.infinity,
+                padding: const EdgeInsets.all(18),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFF6C5CE7), Color(0xFFA29BFE)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Text(
+                            'Summer Sale',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Text(
+                            'Up to 50% off selected items',
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: 13,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Icon(
+                      Icons.local_offer_rounded,
+                      color: Colors.white,
+                      size: 42,
+                    ),
+                  ],
                 ),
               ),
 
@@ -135,10 +174,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: GridView.builder(
                   itemCount: allProducts.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
+                    crossAxisCount: 3,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
-                    childAspectRatio: 0.7,
+                    childAspectRatio: 0.5,
                   ),
                   itemBuilder: (context, index) {
                     final product = allProducts[index];

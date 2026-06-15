@@ -5,14 +5,16 @@ import 'package:http/http.dart' as http;
 class ApiService {
   Future<ProductsModel> fetchProducts() async {
     final response = await http.get(
-      Uri.parse("https://wantapi.com/products.php"),
+      Uri.parse("https://fakestoreapi.com/products"),
     );
 
     if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
-      return ProductsModel.fromJson(data);
+      final List list = jsonDecode(response.body);
+      return ProductsModel(
+        data: list.map((e) => Data.fromJson(e)).toList(),
+      );
     } else {
-      throw Exception("Failde to load products");
+      throw Exception("Failed to load products");
     }
   }
 }
