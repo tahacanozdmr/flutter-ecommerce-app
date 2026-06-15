@@ -1,5 +1,3 @@
-# Calisma
-
 ## Kısa Açıklama
 
 Calisma, bir REST API üzerinden ürün listesini çeken basit bir Flutter alışveriş
