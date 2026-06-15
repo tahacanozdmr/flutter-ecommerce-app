@@ -53,7 +53,7 @@ class _CartScreenState extends State<CartScreen> {
                             SizedBox(height: 12),
 
                             Text(
-                              "Add items to start shoping",
+                              "Add items to start shopping",
                               style: TextStyle(
                                 color: Colors.grey.shade700,
                                 fontSize: 14,
@@ -85,22 +85,22 @@ class _CartScreenState extends State<CartScreen> {
 
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade200,
+                  color: const Color(0xFFF1EFFC),
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.green.shade300),
+                  border: Border.all(color: const Color(0xFFD6D2F5)),
                 ),
                 padding: EdgeInsets.all(12),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(Icons.info_outlined, color: Colors.grey.shade600),
+                    Icon(Icons.info_outlined, color: const Color(0xFF6C5CE7)),
 
                     SizedBox(width: 8),
 
                     Expanded(
                       child: Text(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus tellus sed dolor consequat vulputate. Vivamus facilisis in massa at lobortis.",
+                        "Your orders are shipped within 2-4 business days. You have the right to free returns within 14 days of delivery.",
                         style: TextStyle(
                           color: Colors.grey.shade700,
                           fontSize: 13,
@@ -116,7 +116,7 @@ class _CartScreenState extends State<CartScreen> {
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
+                  backgroundColor: const Color(0xFF6C5CE7),
                   minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),

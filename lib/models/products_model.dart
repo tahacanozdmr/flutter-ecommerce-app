@@ -69,13 +69,13 @@ class Data {
 
 	Data.fromJson(Map<String, dynamic> json) {
 		id = json['id'];
-		name = json['name'];
-		tagline = json['tagline'];
+		name = json['title'];
+		tagline = json['category'];
 		description = json['description'];
-		price = json['price'];
+		price = "\$${json['price']}";
 		currency = json['currency'];
 		image = json['image'];
-		specs = json['specs'] != null ? new Map<String,dynamic>.from(json['specs']) : null;
+		specs = json['rating'] != null ? new Map<String,dynamic>.from(json['rating']) : null;
 	}
 
 	Map<String, dynamic> toJson() {

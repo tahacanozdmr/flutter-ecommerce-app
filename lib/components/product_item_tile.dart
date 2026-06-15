@@ -38,30 +38,76 @@ class ProductItemTile extends StatelessWidget {
           ),
 
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(10.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 3,
+                  ),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFF1EFFC),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text(
+                    product.tagline ?? "",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: Color(0xFF6C5CE7),
+                      fontSize: 10,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 6),
+
                 Text(
                   product.name ?? "",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-
-                SizedBox(height: 1),
-                Text(
-                  product.tagline ?? "",
-                  style: TextStyle(color: Colors.grey.shade600, fontSize: 12),
-                ),
-
-                SizedBox(height: 1),
-
-                Text(
-                  product.price ?? "",
-                  style: TextStyle(
-                    color: Colors.blue.shade600,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 13,
                   ),
+                ),
+
+                const SizedBox(height: 6),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      product.price ?? "",
+                      style: const TextStyle(
+                        color: Color(0xFF6C5CE7),
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.star_rounded,
+                          color: Colors.amber,
+                          size: 16,
+                        ),
+                        const SizedBox(width: 2),
+                        Text(
+                          "${product.specs?['rate'] ?? '-'}",
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey.shade700,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ],
             ),
