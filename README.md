@@ -1,3 +1,7 @@
+# Mini Katalog Uygulaması
+
+Fake Store API kullanan basit bir Flutter e-ticaret uygulaması.
+
 ## Kısa Açıklama
 
 Calisma, bir REST API üzerinden ürün listesini çeken basit bir Flutter alışveriş
@@ -43,7 +47,7 @@ Başlıca ekranlar:
 
    ```bash
    git clone <repo-url>
-   cd calisma
+   cd flutter-ecommerce-app
    ```
 
 2. Bağımlılıkları yükleyin:
